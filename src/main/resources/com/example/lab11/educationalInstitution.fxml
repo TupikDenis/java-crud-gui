@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1114.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab11.controller.EducationalInstitutionController">
+    <children>
+        <VBox id="addEducationalInstitution" prefHeight="400.0" prefWidth="199.0">
+            <children>
+                <HBox prefHeight="50.0" prefWidth="158.0">
+                    <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="44.6708984375" />
+                        <TextField fx:id="textAddEducationalInstitution" prefHeight="29.0" prefWidth="103.0">
+                            <HBox.margin>
+                                <Insets left="10.0" />
+                            </HBox.margin>
+                        </TextField>
+                    </children>
+                </HBox>
+            <HBox prefHeight="50.0" prefWidth="158.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Year" wrappingWidth="44.6708984375" />
+                  <TextField fx:id="textAddFounded" prefHeight="29.0" prefWidth="103.0">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="158.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Town" wrappingWidth="44.6708984375" />
+                  <ComboBox fx:id="comboAddTown" prefWidth="150.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="158.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Type" wrappingWidth="44.6708984375" />
+                  <ComboBox fx:id="comboAddType" prefWidth="150.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="158.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Person" wrappingWidth="51.6708984375" />
+                  <ComboBox fx:id="comboAddPerson" prefWidth="150.0" />
+               </children>
+            </HBox>
+                <Button fx:id="add" mnemonicParsing="false" onAction="#addEducationalInstitution" prefHeight="31.0" prefWidth="171.0" text="add" />
+            <HBox prefHeight="50.0" prefWidth="158.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Year" wrappingWidth="44.6708984375" />
+                  <TextField fx:id="checkYear" prefHeight="29.0" prefWidth="103.0">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </VBox>
+        <Separator orientation="VERTICAL" prefHeight="400.0" prefWidth="29.0" />
+      <VBox id="addEducationalInstitution" prefHeight="400.0" prefWidth="196.0">
+         <children>
+            <HBox prefHeight="50.0" prefWidth="158.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="44.6708984375" />
+                  <TextField fx:id="textUpdateEducationalInstitution" prefHeight="29.0" prefWidth="103.0">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="158.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Year" wrappingWidth="44.6708984375" />
+                  <TextField fx:id="textUpdateFounded" prefHeight="29.0" prefWidth="103.0">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="158.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Town" wrappingWidth="44.6708984375" />
+                  <ComboBox fx:id="comboUpdateTown" prefWidth="150.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="158.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Type" wrappingWidth="44.6708984375" />
+                  <ComboBox fx:id="comboUpdateType" prefWidth="150.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="158.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Person" wrappingWidth="51.6708984375" />
+                  <ComboBox fx:id="comboUpdatePerson" prefWidth="150.0" />
+               </children>
+            </HBox>
+                <Button fx:id="update" mnemonicParsing="false" onAction="#updateEducationalInstitution" prefHeight="31.0" prefWidth="171.0" text="update" />
+                <Button fx:id="delete" mnemonicParsing="false" onAction="#deleteEducationalInstitution" prefHeight="31.0" prefWidth="171.0" text="delete">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+        <VBox prefHeight="400.0" prefWidth="690.0">
+            <children>
+                <TableView fx:id="table" onMouseClicked="#selectEducationalInstitution" prefHeight="400.0" prefWidth="491.0">
+                    <columns>
+                        <TableColumn fx:id="idColumn" prefWidth="75.0" text="Id" />
+                        <TableColumn fx:id="EducationalInstitutionColumn" prefWidth="122.0" text="Name" />
+                  <TableColumn fx:id="FoundedColumn" prefWidth="122.0" text="Year" />
+                  <TableColumn fx:id="TownColumn" prefWidth="122.0" text="Town" />
+                  <TableColumn fx:id="TypeColumn" prefWidth="122.0" text="Type" />
+                  <TableColumn fx:id="PersonColumn" prefWidth="122.0" text="Person" />
+                    </columns>
+                </TableView>
+            </children>
+        </VBox>
+    </children>
+</HBox>
